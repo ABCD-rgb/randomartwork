@@ -1,8 +1,12 @@
 import { useState } from "react";
+import './Home.css';
+
+import qmark from '../assets/qmark.png';
 
 export default function Home() {
 
     const [artwork, setArtwork] = useState("");
+    const [title, setTitle] = useState("");
 
     const generateArtwork = () => {
         // gets a random id of an artwork
@@ -23,6 +27,7 @@ export default function Home() {
                         console.log(body.config.iiif_url + "/" + body.data.image_id + "/full/843,/0/default.jpg")
                         imageLink = body.config.iiif_url + "/" + body.data.image_id + "/full/843,/0/default.jpg";
                         setArtwork(imageLink)
+                        setTitle(body.data.title)
                     })
             })
     }
@@ -30,9 +35,27 @@ export default function Home() {
 
     return (
         <>
-            <h1>Random Artwork Generator</h1>
-            <button onClick={generateArtwork}>Generate</button>
-            <img src={artwork} alt="Here!!!" />
+            <div id="header">
+                <div class="headername">
+                    <div id="header1">Artwork</div>
+                    <div id="header2">Generator</div>
+                </div>
+                <button onClick={generateArtwork}>Generate</button>
+            </div>
+            {
+                (artwork==="")
+                ? (
+                    <div id="qmarkSection">
+                        <img src={qmark} alt="Question" />
+                    </div>
+                ) 
+                : (
+                    <div id="artworkSection">
+                        <img src={artwork} alt="Here!!!" />
+                        <p>{title}</p>
+                    </div>
+                )
+            }
         </>
     )
 }

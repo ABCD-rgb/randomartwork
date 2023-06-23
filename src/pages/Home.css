@@ -1,0 +1,30 @@
+body {
+    background-image: url(../assets/wavesbg.svg);
+    background-size: cover;
+}
+
+.headername {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: white;
+
+    display: flex;
+}
+
+#header1 {
+    color: #D4DF9A;
+}
+
+button {
+    background-color: #DFC89A;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 18px;
+}
