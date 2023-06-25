@@ -1,6 +1,18 @@
+
 body {
     background-image: url(../assets/wavesbg.svg);
+    background-color: #170A07;
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*======== header ========*/
+#header {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 18px;
 }
 
 .headername {
@@ -16,15 +28,71 @@ body {
 }
 
 button {
-    background-color: #DFC89A;
-    font-size: 1.5em;
-    border: none;
+    background-image: linear-gradient(144deg, #FA7268, #DFC89A 50%,#D4DF9A);
+    color: white;
+    font-size: 1.5vw;
+    padding: 0 2% 0 2%; margin-right: 10px;
     border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
 
-#header {
+button:hover {
+    background-image: linear-gradient(90deg, #FA7268, #DFC89A 50%,#D4DF9A);
+}
+
+button:active {
+    background-image: none;
+    background-color: #FA7268;
+}
+/* ================================ */
+
+#qmarkContainer {    
+    height: 20vw; width: 20vw;
+    border-radius: 10px;
+    padding-top: 10vh;
+    margin: auto;
+}
+
+#qmarkContainer img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+#imgContainer {
+    height: 25vw; width: 25vw;
+    
+}
+
+#imgContainer img {
+    display: block;
+    height: auto; width: 100%;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+h3 {
+    font-family: 'Hind', sans-serif;
+    color: white;
+}
+
+#artworkSection {
     display: flex;
-    justify-content: space-between;
-
-    margin: 18px;
+    justify-content: space-evenly;
+    padding-top: 10vh;
 }
+
+#detailContainer {
+    width: 50vw;
+}
+
+
+
+
